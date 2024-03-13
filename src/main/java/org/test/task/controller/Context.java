@@ -4,12 +4,12 @@ public interface Context {
     Controller controller = null;
     Boolean isExit = false;
 
-    public Controller getController();
+    Controller getController();
 
-    public void setController(Controller controller);
+    void setController(Controller controller);
 
-    public Boolean getIsExit();
+    Boolean getIsExit();
 
-    public void setIsExit(Boolean isExit);
+    void setIsExit(Boolean isExit);
 
 }

@@ -1,6 +1,6 @@
 package org.test.task.controller;
 
 public interface Controller {
-    public void run();
-    public void toggle(Context application);
+    void run();
+    void toggle(Context application);
 }

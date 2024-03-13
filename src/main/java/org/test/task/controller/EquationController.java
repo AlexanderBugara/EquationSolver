@@ -1,6 +1,5 @@
 package org.test.task.controller;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class EquationController implements Controller {
