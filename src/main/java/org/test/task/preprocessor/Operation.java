@@ -1,11 +1,14 @@
 package org.test.task.preprocessor;
 
-public class Operator implements Element {
+public class Operation implements Element {
     private final char operator;
     private final Element left;
     private final Element right;
 
-    public Operator(char operator, Element left, Element right) {
+    public static boolean isOperator(char c) {
+        return c == '+' || c == '-' || c == '*' || c == '/';
+    }
+    public Operation(char operator, Element left, Element right) {
         this.operator = operator;
         this.left = left;
         this.right = right;
