@@ -36,6 +36,4 @@ public class ExpressionEvaluatorTest {
         double relult = eval.evaluate("4*-7", null);
         assertEquals(-28, relult, 0.0001);
     }
-
-    //2*x+5=17, -1.3*5/x=1.2, 2*x*x=10, 2*(x+5+х)+5=10, 17=2*x+5
 }
