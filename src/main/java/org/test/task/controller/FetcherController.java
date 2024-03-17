@@ -1,4 +1,5 @@
 package org.test.task.controller;
+import org.test.task.persistance.EquationSaver;
 
 import java.util.Scanner;
 
@@ -12,6 +13,6 @@ public class FetcherController implements Controller {
 
     @Override
     public void toggle(Context context) {
-        context.setController(new EquationController());
+        context.setController(new EquationController(new EquationSaver()));
     }
 }
