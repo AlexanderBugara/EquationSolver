@@ -11,13 +11,17 @@ public class Equation {
 
         ExpressionEvaluator evaluator = new ExpressionEvaluator(null);
         Variable var = new Variable(variable);
-        Double resultLeft = evaluator.evaluate(left, var);
-        Double resultRight = evaluator.evaluate(right, var);
-        double maxDelta = 1.0E-9;
+        try {
+            Double resultLeft = evaluator.evaluate(left, var);
+            Double resultRight = evaluator.evaluate(right, var);
+            double maxDelta = 1.0E-9;
 
-        if ((resultLeft <= 0 && resultRight <= 0) ||
-                (resultLeft >= 0 && resultRight >= 0)) {
-            return Math.abs(resultLeft - resultRight) < maxDelta;
+            if ((resultLeft <= 0 && resultRight <= 0) ||
+                    (resultLeft >= 0 && resultRight >= 0)) {
+                return Math.abs(resultLeft - resultRight) < maxDelta;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         return false;
     }
